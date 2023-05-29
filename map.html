@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>แผนที่สวนในประเทศไทย</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+#map {
+    width: 100vw;  /* 100% of viewport width */
+    height: calc(100vh - 60px); /* 100% of viewport height minus the height of the navbar */
+    position: absolute; /* Position the map absolutely to take full advantage of the page */
+    top: 60px; /* Start the map exactly where the navbar ends */
+}
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Farm Map</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+            </ul>
+
+            <!-- เพิ่ม <select> ที่นี่ -->
+            <select class="custom-select ml-auto" id="provinceSelect" style="width:auto;">
+                <!-- ตัวเลือกจะถูกเพิ่มโดย JavaScript -->
+            </select>
+
+        </div>
+    </nav>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="map.js"></script>
+</body>
+</html>
